@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/update_tcr/{{dataa.id}},{{vala.id}}" method="post">
+        {% csrf_token %}
+        name: <input type="text" value="{{vala.first_name}}" name="name"><br><br>
+        email: <input type="email" value="{{vala.email}}" name="email"><br><br>
+        phone: <input type="text" value="{{dataa.phone}}" name="phone"><br><br>
+        dep: <input type="text" value="{{dataa.dep}}" name="dep"><br><br>
+        Username: <input type="text" value="{{dataa.Username}}" name="user"><br><br>
+        Password: <input type="Password" value="{{dataa.Password}}" name="pass"><br><br>
+        <input type="submit" value="Edit">
+    </form>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update_stud/{{dataa.id}},{{vala.id}}" method="post">
+        {% csrf_token %}
+        name: <input type="text" value="{{vala.first_name}}" name="name"><br><br>
+        email: <input type="email" value="{{vala.email}}" name="email"><br><br>
+        phone: <input type="text" value="{{dataa.phone}}" name="phone"><br><br>
+        dob: <input type="text" value="{{dataa.dob|date:'Y-m-d'}}" name="dob"><br><br>
+        username: <input type="text" value="{{vala.username}}" name="user"><br><br>
+        password: <input type="Password" value="{{vala.password}}" name="pass"><br><br>
+        <input type="submit" value="Edit">
+    </form>
+    </body>
+</html>
